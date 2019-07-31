@@ -12,6 +12,7 @@ import { Platform, Dimensions } from "react-native";
 import MenuDrawer from "../../components/MenuDrawer";
 import { Icon } from "native-base";
 import HistoryScreen from '../../screens/pages/History';
+import Register from "../../screens/pages/Register";
 
 const WIDTH = Dimensions.get("window").width;
 
@@ -86,6 +87,9 @@ const AppStackNavigator = createStackNavigator(
     },
     History: {
       screen: HistoryScreen
+    },
+    Register: {
+      screen : Register
     }
   },
   {

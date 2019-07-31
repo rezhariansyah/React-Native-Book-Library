@@ -11,12 +11,14 @@ import {
 } from "react-native";
 import BackToHome from "../../components/BackToHome";
 
-export default class LoginView extends Component {
+export default class Register extends Component {
   constructor(props) {
     super(props);
     state = {
       email: "",
-      password: ""
+      password: "",
+      ktp: "",
+      fullname: ""
     };
   }
 
@@ -28,10 +30,21 @@ export default class LoginView extends Component {
     return (
       <View style={styles.container}>
         <BackToHome navigation={this.props.navigation} />
-        <View>
+
+        <View style={{marginBottom:20}}>
+            <Text style={{fontSize:20}}>Register Form</Text>
+        </View>
+
+        <View style={styles.inputContainer}>
           <Image
-            style={styles.logoUser}
-            source={require("../../assets/img/users.png")}
+            style={styles.inputIcon}
+            source={require("../../assets/img/boy.png")}
+          />
+          <TextInput
+            style={styles.inputs}
+            placeholder="Full Name"
+            underlineColorAndroid="transparent"
+            onChangeText={fullname => this.setState({ fullname })}
           />
         </View>
 
@@ -46,6 +59,19 @@ export default class LoginView extends Component {
             keyboardType="email-address"
             underlineColorAndroid="transparent"
             onChangeText={email => this.setState({ email })}
+          />
+        </View>
+
+        <View style={styles.inputContainer}>
+          <Image
+            style={styles.inputIcon}
+            source={require("../../assets/img/identification.png")}
+          />
+          <TextInput
+            style={styles.inputs}
+            placeholder="ID Card"
+            underlineColorAndroid="transparent"
+            onChangeText={ktp => this.setState({ ktp })}
           />
         </View>
 
@@ -67,23 +93,9 @@ export default class LoginView extends Component {
 
         <TouchableHighlight
           style={[styles.buttonContainer, styles.loginButton]}
-          onPress={() => this.onClickListener("login")}
+          onPress={() => this.onClickListener("register")}
         >
-          <Text style={styles.loginText}>Login</Text>
-        </TouchableHighlight>
-
-        <TouchableHighlight
-          style={styles.buttonContainer}
-          onPress={() => this.onClickListener("restore_password")}
-        >
-          <Text>Forgot your password?</Text>
-        </TouchableHighlight>
-
-        <TouchableHighlight
-          style={styles.buttonContainer}
-          onPress={() => this.props.navigation.navigate('Register')}
-        >
-          <Text style={{color:'#15A5E7'}}>Register</Text>
+          <Text style={styles.loginText}>Register</Text>
         </TouchableHighlight>
       </View>
     );

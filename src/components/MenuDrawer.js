@@ -30,12 +30,19 @@ class MenuDrawer extends Component {
         <View style={styles.topLink}>
           <View style={styles.profile}>
             <View style={styles.imageView}>
-                <Image style={{width:110,height:110, marginBottom:20}} source={require('../assets/img/man.png')} />
+              <Image
+                style={{ width: 150, height: 150, marginBottom: 20 }}
+                source={require("../assets/img/man.png")}
+              />
+              <View style={{ alignItems: "center" }}>
+                <Text style={{ color: "white" }}>Your Name</Text>
+                <Text style={{ color: "white" }}>ID Card</Text>
+                <Text style={{ color: "white" }}>Email</Text>
+              </View>
             </View>
           </View>
         </View>
         <View style={styles.bottomLink}>
-          {this.navLink("Home", "Home")}
           {this.navLink("Settings", "Settings")}
           {this.navLink("Login", "Login")}
         </View>
@@ -60,27 +67,28 @@ const styles = StyleSheet.create({
     textAlign: "left"
   },
   topLink: {
-    height: 160,
+    height: 300,
     backgroundColor: "#0F88F1"
   },
   bottomLink: {
     flex: 1,
     backgroundColor: "white",
     paddingTop: 10,
-    paddingBottom: 400
+    paddingBottom: 400,
+    color: "red"
   },
-  profile : {
-    flex:1,
-    flexDirection: 'row',
-    alignItems:'center',
-    paddingTop:25,
-    borderBottomWidth:1,
-    borderColor:'grey'
+  profile: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    paddingTop: 25,
+    borderBottomWidth: 1,
+    borderColor: "grey"
   },
-  imageView : {
-    flex:1,
-    justifyContent:'center',
-    flexDirection:'column',
-    alignItems:'center'
+  imageView: {
+    flex: 1,
+    justifyContent: "center",
+    flexDirection: "column",
+    alignItems: "center"
   }
 });
