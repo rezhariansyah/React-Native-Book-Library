@@ -1,11 +1,17 @@
 ### Simple Library
-Library mobile app that provides books with several categories, user can borrow and read the details of each book 
+Library mobile app that provides books with several categories
 
 ### App requires before running :
 - NodeJS v8+
 - React Native
 - Android studio
 - sdk
+
+### Feature
+- User can borrow book from list book
+- See detail book
+- Create account
+- Donate book
 
 ### SCREENSHOTS
 <p align="left">
