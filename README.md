@@ -1,4 +1,4 @@
-### Simple Library
+# Simple Library
 Library mobile app that provides books with several categories
 
 ### App requires before running :
