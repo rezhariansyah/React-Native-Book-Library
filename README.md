@@ -1,7 +1,7 @@
 # Simple Library
 Library mobile app that provides books with several categories
 
-### App requires before running :
+### Requirements
 - NodeJS v8+
 - React Native
 - Android studio
