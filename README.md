@@ -1,4 +1,4 @@
-# Simple Library
+# Librarians
 Library mobile app that provides books with several categories
 
 ### Requirements
