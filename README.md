@@ -22,4 +22,4 @@ Library mobile app that provides books with several categories
 
 ### Contributor
 <p align="left">
-  <img src="https://avatars0.githubusercontent.com/u/42859545?s=460&v=4" width="60" alt="accessibility text">
+  <img src="https://avatars0.githubusercontent.com/u/42859545?s=460&v=4" width="100" alt="accessibility text">
